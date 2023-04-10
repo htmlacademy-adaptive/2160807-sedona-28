@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -14,22 +15,22 @@
         <div class="main-nav__wrapper">
           <ul class="main-nav__list">
             <li class="main-nav__item main-nav__item--active">
-              <a href="index.html">
+              <a href="index.html" class="main-nav__link">
                 Главная
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="catalog.html">
+              <a href="catalog.html" class="main-nav__link">
                 Фото и видео
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="form.html">
+              <a href="form.html" class="main-nav__link">
                 Форма Отзыва
               </a>
             </li>
             <li class="main-nav__item">
-              <a href="https://htmlacademy.ru/intensive/adaptive">
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">
                 HTML ACADEMY
               </a>
             </li>
@@ -43,11 +44,11 @@
 
       <section class="form-intro">
         <div class="form-intro__wrapper">
-          <div class="form-intro__image">
+          <div class="catalog-intro__image">
             <img src="img/sedona.png" width="229" height="39" alt="Sedona">
           </div>
           <h2 class="form-intro__title title">Оставьте свой отзыв</h2>
-          <p class="form-intro__description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
+          <p class="form-intro__description description">Помогите нашим отелям стать лучше! оставьте отзыв о них, а также о посещенных вами достопримечательностях</p>
         </div>
       </section>
 
@@ -123,7 +124,7 @@
       <div class="main-footer__html html-logo">
         <span class="html-logo__span">Разработано</span>
         <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">
-          <img src="#" width="28" height="35" alt="логотип HTML-academy">
+          <span class="visually-hidden">Логотип HTML-Academy</span>
         </a>
       </div>
     </footer>
