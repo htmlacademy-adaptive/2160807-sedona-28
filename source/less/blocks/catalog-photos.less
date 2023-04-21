@@ -1,30 +1,121 @@
+@import "../base/mixin.less";
+@import "../base/variables.less";
+
+.catalog-photos__wrapper {
+  padding-top: 37px;
+  background-color: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    padding-top: 66px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 100px;
+  }
+}
+
+.catalog-intro__title {
+  font-size: 21px;
+  margin-bottom: 20px;
+  text-align: center;
+
+  @media (min-width: 768px) {
+    .title-tablet();
+    margin-bottom: 40px;
+  }
+}
+
+.catalog-intro__description {
+  text-align: center;
+  padding: 0 20px;
+
+  @media (min-width: 768px) {
+    padding: 0 161px;
+    margin-bottom: 67px;
+    font-size: 21px;
+    line-height: 26px;
+  }
+}
+
 .catalog-photos__list {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
+  .list-reset();
+
+  @media (min-width: 768px) {
+    display: grid;
+    grid-template-columns: 324px 324px;
+    width: 648px;
+  }
+
+  @media (min-width: 1200px) {
+    grid-template-columns: 400px 400px 400px;
+    width: 1200px;
+  }
 }
 
 .catalog-photos__title {
   font-size: 14px;
   line-height: 21px;
+  margin-bottom: 10px;
 }
 
 .catalog-photos__item {
   padding: 24px 20px;
   box-sizing: border-box;
+
+  @media (min-width: 768px) {
+    padding: 0;
+  }
 }
 
-.catalog-photos__link {
-  margin-bottom: 15px;
-  display: inline-block;
+.catalog-photos__item:first-child {
+  @media (min-width: 768px) {
+    grid-column: 1/3;
+  }
+
+  @media (min-width: 1200px) {
+    grid-column: 1/4;
+  }
+}
+
+.catalog-photos__content {
+  padding-top: 15px;
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    padding: 22px 20px 0;
+    background-color: @catalog-gray;
+    align-items: center;
+  }
+
+  @media (min-width: 1200px) {
+    background-color: @opacity-black;
+  }
+}
+
+.catalog-photos__content--dark-gray {
+  @media (min-width: 768px) {
+    background-color: @catalog-dr-gray;
+  }
 }
 
 .catalog-photos__author {
   margin: 0;
   margin-bottom: 11px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 15px;
+  }
 }
 
 .catalog-photos__like {
   font-weight: 700;
   color: #000000;
+}
+
+.catalog-photos__img {
+  display: block;
 }

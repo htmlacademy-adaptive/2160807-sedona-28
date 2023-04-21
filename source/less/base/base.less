@@ -1,11 +1,28 @@
+@import "../base/variables.less";
+
+html {
+  height: 100%;
+}
+
 body {
   font-family: "PT Sans", sans-serif;
   font-size: 14px;
   line-height: 21px;
   font-weight: 400;
-  color: #333333;
-  background-color: #ffffff;
+  color: @dr-gray;
+  background-color: #e7e5e5;
   width: 320px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+
+  @media (min-width: 768px) {
+    min-width: 768px;
+  }
+
+  @media (min-width: 1200px) {
+    min-width: 1200px;
+  }
 }
 
 .title {
@@ -20,4 +37,15 @@ body {
 .description {
   text-transform: uppercase;
   margin: 0;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
