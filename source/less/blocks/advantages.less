@@ -9,17 +9,17 @@
 .advantages__list {
   .list-reset();
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     display: grid;
     grid-template-columns: 256px 256px 256px;
   }
 
-  @media (min-width: 1280px) {
+  @media (min-width: @w-desktop) {
     grid-template-columns: 400px 400px 400px;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @w-tablet) {
   .advantages__item:first-child {
     grid-column: 1/4;
     display: flex;
@@ -42,7 +42,7 @@
   margin-bottom: 35px;
   text-align: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     font-size: 21px;
     line-height: 26px;
     width: 530px;
@@ -56,7 +56,7 @@
   text-align: center;
   margin-bottom: 16px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     margin-bottom: 55px;
   }
 }
@@ -64,7 +64,7 @@
 .advantage__title {
   margin-bottom: 11px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     margin-bottom: 20px;
     font-size: 21px;
     line-height: 21px;
@@ -75,7 +75,7 @@
   margin-bottom: 17px;
   display: inline-block;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     margin-bottom: 32px;
   }
 }
@@ -86,13 +86,13 @@
   background-color: @white;
   padding: 23px 18px 46px;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     display: flex;
     padding: 0;
   }
 }
 
-@media (min-width: 768px) {
+@media (min-width: @w-tablet) {
   .advantages__town-item {
     width: 256px;
     min-height: 331px;
@@ -107,7 +107,7 @@
   }
 }
 
-@media (min-width: 1280px) {
+@media (min-width: @w-desktop) {
   .advantages__town-item {
     width: 400px;
     padding: 169px 50px 0;
@@ -128,7 +128,7 @@
   background-repeat: no-repeat;
   background-position-x: center;
 
-  @media (min-width: 768px) {
+  @media (min-width: @w-tablet) {
     background-image: none;
   }
 }
@@ -138,20 +138,18 @@
   color: @white;
   text-align: center;
   padding: 37px 18px;
-}
 
-@media (min-width: 768px) {
-  .advantage__blue-content {
+  @media (min-width: @w-tablet) {
     width: 256px;
     min-height: 256px;
     box-sizing: border-box;
     padding: 52px 33px 0;
   }
-}
 
-@media (min-width: 1280px) {
-  .advantage__blue-content {
-    width: 400px;
+  @media (min-width: @w-desktop) {
+    .advantage__blue-content {
+      width: 400px;
+    }
   }
 }
 
@@ -159,10 +157,8 @@
   background-color: @gray;
   text-align: center;
   padding: 24px 26px;
-}
 
-@media (min-width: 768px) {
-  .advantages__item--background-gray {
+  @media (min-width: @w-tablet) {
     padding: 41px 33px 0;
   }
 }
