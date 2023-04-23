@@ -1,10 +1,37 @@
+@import "../base/mixin.less";
+
 .main-footer {
   padding-top: 33px;
   padding-bottom: 33px;
+  background-color: @white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 60px;
+    min-height: 120px;
+  }
+
+  @media (min-width: 1200px) {
+    padding: 0 120px;
+  }
 }
 
 .social__list {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  .list-reset();
+}
+
+.main-footer__title {
+  margin-bottom: 30px;
+
+  @media (min-width: @w-tablet) {
+    margin: 0;
+  }
+}
+
+.html-logo__span {
+  text-transform: uppercase;
 }

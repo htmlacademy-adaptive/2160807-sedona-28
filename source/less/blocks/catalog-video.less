@@ -1,12 +1,36 @@
 .catalog-video__wrapper {
   padding-top: 17px;
   text-align: center;
+  background-color: @white;
+
+  @media (min-width: @w-tablet) {
+    padding-top: 58px;
+    padding-bottom: 40px;
+  }
+
+  @media (min-width: @w-desktop) {
+    padding-top: 62px;
+    padding-bottom: 84px;
+  }
 }
 
 .catalog-video__title {
   margin-bottom: 20px;
+
+  @media (min-width: @w-tablet) {
+    font-size: 30px;
+    line-height: 26px;
+  }
 }
 
 .catalog-video__description {
   margin-bottom: 38px;
+  padding: 0 25px;
+
+  @media (min-width: @w-tablet) {
+    font-size: 21px;
+    line-height: 26px;
+    padding: 0 50px;
+    margin-bottom: 65px;
+  }
 }
