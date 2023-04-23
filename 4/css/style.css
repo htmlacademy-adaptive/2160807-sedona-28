@@ -98,6 +98,8 @@ body {
     justify-content: space-between;
     width: 100%;
   }
+}
+@media (min-width: 768px) {
   .main-nav__toggle {
     display: none;
   }
@@ -171,7 +173,7 @@ body {
     grid-template-columns: 256px 256px 256px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .advantages__list {
     grid-template-columns: 400px 400px 400px;
   }
@@ -260,7 +262,7 @@ body {
     margin-bottom: 32px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .advantages__town-item {
     width: 400px;
     padding: 169px 50px 0;
@@ -297,8 +299,8 @@ body {
     padding: 52px 33px 0;
   }
 }
-@media (min-width: 1280px) {
-  .advantage__blue-content {
+@media (min-width: 1200px) {
+  .advantage__blue-content .advantage__blue-content {
     width: 400px;
   }
 }
@@ -348,7 +350,7 @@ body {
     line-height: 26px;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .booking__title {
     line-height: 30px;
   }
@@ -356,12 +358,15 @@ body {
 .booking__description {
   margin-bottom: 32px;
 }
+.booking__link {
+  min-width: 284px;
+}
 @media (min-width: 768px) {
   .booking__link {
     width: 100%;
   }
 }
-@media (min-width: 1280px) {
+@media (min-width: 1200px) {
   .booking__link {
     width: 100%;
   }
