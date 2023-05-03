@@ -1,5 +1,3 @@
-@import "../base/variables.less";
-
 .main-header {
   min-height: 56px;
   box-sizing: border-box;
@@ -12,28 +10,129 @@
   top: 0;
   left: 50%;
   transform: translateX(-50%);
+  z-index: 3;
 }
 
 .main-nav {
   display: flex;
   align-items: center;
   justify-content: end;
+  min-height: 56px;
+  position: relative;
 }
 
 .main-nav__wrapper {
-  display: none;
+  width: 100%;
 
   @media (min-width: @w-tablet) {
     display: flex;
     justify-content: space-between;
-    width: 100%;
   }
 }
 
-@media (min-width: @w-tablet) {
-  .main-nav__toggle {
+@media (max-width: @w-mobile) {
+  .main-nav--closed {
     display: none;
   }
+
+  .main-nav--opened {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+  }
+}
+
+.main-nav--closed ~ .main-nav__toggle {
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  position: absolute;
+  cursor: pointer;
+  right: 20px;
+  top: 17px;
+  z-index: 10;
+
+  @media (min-width: @w-tablet) {
+    display: none;
+  }
+}
+
+.main-nav--closed ~ .main-nav__toggle::before {
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 23px;
+  height: 4px;
+  background-color: @blue;
+  box-shadow: 0 8px 0 0 @blue, 0 16px 0 0 @blue;
+  z-index: 10;
+
+  &:active::before {
+    opacity: 30%;
+  }
+
+  &:hover::before {
+    opacity: 60%;
+  }
+}
+
+.main-nav--opened ~ .main-nav__toggle {
+  position: absolute;
+  width: 23px;
+  height: 22px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  right: 20px;
+  top: 17px;
+  z-index: 10;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: -3px;
+    width: 27px;
+    height: 4px;
+    background-color: @white;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    box-shadow: none;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  &:hover {
+    opacity: 30%;
+  }
+
+  @media (min-width: @w-tablet) {
+    &::before,
+    &::after {
+      display: none;
+    }
+  }
+}
+
+.main-nav--nojs ~ .main-nav__toggle {
+  display: none;
+}
+
+.main-nav--nojs {
+  position: static;
 }
 
 .main-nav__list {
@@ -59,8 +158,18 @@
   line-height: 26px;
   text-transform: uppercase;
   text-decoration: none;
-  box-shadow: 0 0 1px rgba(1, 1, 1, 0.2);
   text-align: center;
+  border-top: 1px solid fade(@white, 20%);
+  border-bottom: 1px solid fade(#010101, 20%);
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-down;
+    color: fade(@white, 30%);
+  }
 
   @media (min-width: @w-tablet) {
     width: 153px;
@@ -70,6 +179,21 @@
     line-height: 21px;
     box-shadow: none;
     min-height: 56px;
+    border: none;
+
+    &:active {
+      color: fade(#000000, 30%);
+      background-color: transparent;
+    }
+
+    &:hover {
+      color: @blue;
+      background-color: transparent;
+    }
+
+    &--active {
+      color: @brown;
+    }
   }
 
   @media (min-width: @w-desktop) {

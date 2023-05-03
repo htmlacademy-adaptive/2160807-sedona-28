@@ -59,11 +59,16 @@
   font-size: 14px;
   line-height: 21px;
   margin-bottom: 10px;
+
+  @media (min-width: @w-desktop) {
+    color: @white;
+  }
 }
 
 .catalog-photos__item {
   padding: 24px 20px;
   box-sizing: border-box;
+  position: relative;
 
   @media (min-width: @w-tablet) {
     padding: 0;
@@ -92,13 +97,25 @@
   }
 
   @media (min-width: @w-desktop) {
-    background-color: @opacity-black;
+    background-color: fade(#000000, 30%);
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    color: @white;
   }
 }
 
 .catalog-photos__content--dark-gray {
   @media (min-width: @w-tablet) {
     background-color: @catalog-dr-gray;
+  }
+
+  @media (min-width: @w-desktop) {
+    background-color: fade(#000000, 30%);
+    position: absolute;
+    width: 90%;
+    bottom: 0;
+    color: @white;
   }
 }
 
@@ -114,6 +131,10 @@
 .catalog-photos__like {
   font-weight: 700;
   color: #000000;
+
+  @media (min-width: @w-desktop) {
+    color: @white;
+  }
 }
 
 .catalog-photos__img {
