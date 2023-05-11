@@ -12,4 +12,13 @@
   line-height: 26px;
   display: inline-block;
   border: none;
+
+  &:hover {
+    background-color: @blue-hover;
+  }
+
+  &:active {
+    background-color: @blue-down;
+    color: fade(@white, 30%);
+  }
 }
