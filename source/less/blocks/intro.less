@@ -1,5 +1,3 @@
-@import "../base/variables.less";
-
 .intro {
   background-image: url("../../img/intro-triangle.png"), url("../../img/background-intro.jpg");
   background-color: @gray;
@@ -11,4 +9,46 @@
   padding-top: 90px;
   padding-bottom: 16px;
   text-align: center;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-triangle-mobile@2x.png"), url("../../img/background-intro-mobile@x2.jpg");
+    background-position-x: center, center;
+    background-position-y: bottom, center;
+    background-size: 100%;
+  }
+
+  @media (min-width: @w-tablet) {
+    background-image: url("../../img/intro-triangle-tablet@1x.png"), url("../../img/background-intro-tablet@x1.jpg");
+    background-position-x: center, center;
+    background-position-y: bottom, center;
+    padding-top: 77px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/intro-triangle-tablet@2x.png"), url("../../img/background-intro-tablet@x2.jpg");
+      background-position-x: center, center;
+      background-position-y: bottom, center;
+      background-size: 100%;
+    }
+  }
+
+  @media (min-width: @w-desktop) {
+    background-image: url("../../img/intro-triangle-desktop@1x.png"), url("../../img/background-intro-desktop@x1.jpg");
+    background-position-x: center, center;
+    background-position-y: bottom, center;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/intro-triangle-desktop@2x.png"), url("../../img/background-intro-desktop@x2.jpg");
+      background-position-x: center, center;
+      background-position-y: bottom, center;
+      background-size: 100%;
+    }
+  }
+}
+
+.intro__img {
+  padding: 0;
+
+  @media (min-width: @w-tablet) {
+    padding-bottom: 68px;
+  }
 }

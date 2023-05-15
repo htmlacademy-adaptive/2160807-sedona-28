@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Седона</title>
     <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
   </head>
   <body class="page__body">
     <header class="main-header">
@@ -49,7 +53,11 @@
 
       <section class="catalog-intro">
         <div class="catalog-intro__image">
-          <img src="img/sedona.png" width="229" height="39" alt="Sedona">
+          <picture>
+            <source media="(min-width: 1200px)" srcset="img/sedona-desktop@1x.png 1x, img/sedona-desktop@2x.png 2x" wigth="460" height="80">
+            <source media="(min-width: 768px)" srcset="img/sedona-tablet@1x.png 1x, img/sedona-tablet@2x.png 2x" wigth="457" height="77">
+            <img class="catalog-intro__img" src="img/sedona.png" width="229" height="39" alt="Sedona" srcset="img/sedona-mobile@2x.png 2x">
+          </picture>
         </div>
       </section>
 
@@ -60,7 +68,11 @@
           <ul class="catalog-photos__list">
             <li class="catalog-photos__item">
               <a class="catalog-photos__link" href="#">
-                <img class="catalog-photos__img" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Дорога и закат">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x" wigth="1200" height="400">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x" wigth="648" height="400">
+                  <img class="catalog-photos__img" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Дорога и закат" srcset="img/photo-1-mobile@2x.jpg 2x">
+                </picture>
               </a>
               <div class="catalog-photos__content">
                 <div class="catalog-photos__info">
@@ -72,7 +84,11 @@
             </li>
             <li class="catalog-photos__item">
               <a class="catalog-photos__link" href="#">
-                <img class="catalog-photos__img" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактус">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактус" srcset="img/photo-2-mobile@2x.jpg 2x">
+                </picture>
               </a>
               <div class="catalog-photos__content">
                 <div class="catalog-photos__info">
@@ -84,7 +100,11 @@
             </li>
             <li class="catalog-photos__item">
               <a class="catalog-photos__link" href="#">
-                <img class="catalog-photos__img" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога в горах">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога в горах" srcset="img/photo-3-mobile@2x.jpg 2x">
+                </picture>
               </a>
               <div class="catalog-photos__content catalog-photos__content--dark-gray">
                 <div class="catalog-photos__info">
@@ -96,7 +116,11 @@
             </li>
             <li class="catalog-photos__item">
               <a class="catalog-photos__link" href="#">
-                <img class="catalog-photos__img" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола" srcset="img/photo-4-mobile@2x.jpg 2x">
+                </picture>
               </a>
               <div class="catalog-photos__content">
                 <div class="catalog-photos__info">
