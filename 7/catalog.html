@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Седона</title>
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" href="favicon.ico"> <!-- 32×32 -->
+    <link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="img/apple.png"> <!-- 180×180 -->
+    <link rel="manifest" href="manifest.webmanifest">
+    <base href="https://htmlacademy-adaptive.github.io/2160807-sedona-28/7/">
+</head>
+  <body class="page__body">
+    <header class="main-header">
+      <a class="main-header__logo" href="index.html">
+        <img src="img/logo.png" width="185" height="96" alt="логотип Седона">
+      </a>
+      <nav class="main-nav">
+        <div class="main-nav__wrapper  main-nav--closed main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item">
+              <a href="index.html" class="main-nav__link">
+                Главная
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="catalog.html" class="main-nav__link main-nav__link--active">
+                Фото и видео
+              </a>
+            </li>
+          </ul>
+          <ul class="main-nav__list">
+            <li class="main-nav__item">
+              <a href="form.html" class="main-nav__link">
+                Форма Отзыва
+              </a>
+            </li>
+            <li class="main-nav__item">
+              <a href="https://htmlacademy.ru/intensive/adaptive" class="main-nav__link">
+                HTML ACADEMY
+              </a>
+            </li>
+          </ul>
+        </div>
+        <button class="main-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+      </nav>
+    </header>
+    <main class="catalog-container">
+
+      <h1 class="visually-hidden">Фотографии и видео из города Седона</h1>
+
+      <section class="catalog-intro">
+        <div class="catalog-intro__image">
+          <img class="catalog-intro__img" src="img/sedona.svg" width="229" height="39" alt="Sedona">
+        </div>
+      </section>
+
+      <section class="catalog-photos">
+        <div class="catalog-photos__wrapper">
+          <h2 class="catalog-intro__title title">Фото и видео</h2>
+          <p class="catalog-intro__description description">Не можете решиться на путешествие из-за курса? Фотографии помогут вам забыть о политике и экономике.</p>
+          <ul class="catalog-photos__list">
+            <li class="catalog-photos__item">
+              <a class="catalog-photos__link" href="#">
+                <picture>
+                  <source type="image/webp" media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.webp 1x, img/photo-1-desktop@2x.webp 2x" wigth="1200" height="400">
+                  <source type="image/webp" media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.webp 1x, img/photo-1-tablet@2x.webp 2x" wigth="648" height="400">
+                  <source type="image/webp" srcset="img/photo-1-mobile.webp 1x, img/photo-1-mobile@2x.webp 2x">
+
+                  <source media="(min-width: 1200px)" srcset="img/photo-1-desktop@1x.jpg 1x, img/photo-1-desktop@2x.jpg 2x" wigth="1200" height="400">
+                  <source media="(min-width: 768px)" srcset="img/photo-1-tablet@1x.jpg 1x, img/photo-1-tablet@2x.jpg 2x" wigth="648" height="400">
+                  <img class="catalog-photos__img" src="img/photo-1-mobile.jpg" width="280" height="280" alt="Дорога и закат" srcset="img/photo-1-mobile@2x.jpg 2x">
+                </picture>
+              </a>
+              <div class="catalog-photos__content">
+                <div class="catalog-photos__info">
+                  <h2 class="catalog-photos__title title">неродные просторы</h2>
+                  <p class="catalog-photos__author">Автор фото: Борис</p>
+                </div>
+                <span class="catalog-photos__like">1350</span>
+              </div>
+            </li>
+            <li class="catalog-photos__item">
+              <a class="catalog-photos__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-2-desktop@1x.jpg 1x, img/photo-2-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-2-tablet@1x.jpg 1x, img/photo-2-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-2-mobile.jpg" width="280" height="280" alt="Кактус" srcset="img/photo-2-mobile@2x.jpg 2x">
+                </picture>
+              </a>
+              <div class="catalog-photos__content">
+                <div class="catalog-photos__info">
+                  <h2 class="catalog-photos__title title">Местная растительность</h2>
+                  <p class="catalog-photos__author">Автор фото: Сергей</p>
+                </div>
+                <span class="catalog-photos__like">143</span>
+              </div>
+            </li>
+            <li class="catalog-photos__item">
+              <a class="catalog-photos__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-3-desktop@1x.jpg 1x, img/photo-3-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-3-tablet@1x.jpg 1x, img/photo-3-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-3-mobile.jpg" width="280" height="280" alt="Дорога в горах" srcset="img/photo-3-mobile@2x.jpg 2x">
+                </picture>
+              </a>
+              <div class="catalog-photos__content catalog-photos__content--dark-gray">
+                <div class="catalog-photos__info">
+                  <h2 class="catalog-photos__title title">Дорога на север</h2>
+                  <p class="catalog-photos__author">Автор фото: Петр</p>
+                </div>
+                <span class="catalog-photos__like">96</span>
+              </div>
+            </li>
+            <li class="catalog-photos__item">
+              <a class="catalog-photos__link" href="#">
+                <picture>
+                  <source media="(min-width: 1200px)" srcset="img/photo-4-desktop@1x.jpg 1x, img/photo-4-desktop@2x.jpg 2x" wigth="400" height="267">
+                  <source media="(min-width: 768px)" srcset="img/photo-4-tablet@1x.jpg 1x, img/photo-4-tablet@2x.jpg 2x" wigth="324" height="267">
+                  <img class="catalog-photos__img" src="img/photo-4-mobile.jpg" width="280" height="280" alt="Мост дьявола" srcset="img/photo-4-mobile@2x.jpg 2x">
+                </picture>
+              </a>
+              <div class="catalog-photos__content">
+                <div class="catalog-photos__info">
+                  <h2 class="catalog-photos__title title">Мост дьявола</h2>
+                  <p class="catalog-photos__author">Автор фото: Антон</p>
+                </div>
+                <span class="catalog-photos__like">254</span>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="catalog-video">
+        <div class="catalog-video__wrapper">
+          <h2 class="catalog-video__title title">Все еще сомневаетесь?</h2>
+          <p class="catalog-video__description description">Смотрите видеопрезентацию и скорее за билетами, пока они не подорожали в очередной раз!</p>
+          <a class="catalog-video__link" href="#">
+            <picture>
+              <source media="(min-width: 1200px)" srcset="img/video-desktop@1x.jpg 1x, img/video-desktop@2x.jpg 2x" wigth="800" height="500">
+              <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg 1x, img/video-tablet@2x.jpg 2x" wigth="648" height="500">
+              <img src="img/video.jpg" class="catalog-video__img" width="280" height="177" alt="видео" srcset="img/video-mobile@2x.jpg 2x">
+            </picture>
+          </a>
+        </div>
+      </section>
+
+    </main>
+    <footer class="main-footer">
+      <h2 class="main-footer__title title">#visitSEDONA</h2>
+      <ul class="footer__social social__list">
+        <li class="social__item">
+          <a class="social__button social__button--vk" href=" https://vk.com/htmlacademy">
+            <img src="img/stack.svg#vk" width="24" height="24">
+            <span class="visually-hidden">Вконтакте</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--tm" href="https://t.me/htmlacademy">
+            <img src="img/stack.svg#telegram" width="24" height="24">
+            <span class="visually-hidden">Телеграмм</span>
+          </a>
+        </li>
+        <li class="social__item">
+          <a class="social__button social__button--you" href="https://www.youtube.com/user/htmlacademyru">
+            <img src="img/stack.svg#youtube" width="24" height="24">
+            <span class="visually-hidden">YouTube</span>
+          </a>
+        </li>
+      </ul>
+      <div class="main-footer__html html-logo">
+        <a class="html-logo__link" href="https://htmlacademy.ru/intensive/adaptive">
+          Разработано
+        </a>
+      </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
