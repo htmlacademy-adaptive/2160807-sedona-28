@@ -85,6 +85,16 @@
   }
 }
 
+.catalog-photos__link {
+  &:hover {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+}
+
 .catalog-photos__content {
   padding-top: 15px;
 
@@ -132,9 +142,28 @@
 .catalog-photos__like {
   font-weight: 700;
   color: #000000;
+  position: relative;
+  padding-left: 37px;
 
   @media (min-width: @w-desktop) {
     color: @white;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 23px;
+    height: 21px;
+    mask-image: url("../../img/stack.svg#like");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    background-color: fade(#000000, 30%);
+    top: -5px;
+    left: 0;
+
+    @media (min-width: @w-desktop) {
+      background-color: @white;
+    }
   }
 }
 

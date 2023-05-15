@@ -48,7 +48,7 @@
   &:active {
     background-color: @blue-down;
 
-    svg {
+    img {
       opacity: 30%;
     }
   }
@@ -66,21 +66,38 @@
   display: flex;
   align-items: center;
   text-decoration: none;
+  position: relative;
+  padding-right: 40px;
+  text-transform: uppercase;
+  color: #000000;
+  margin-right: 8px;
+  height: 35px;
 
-  &:hover .html-logo__span {
+  &:hover {
     color: @blue;
   }
 
-  &:hover path {
-    fill: @blue;
-  }
-
-  &:active .html-logo__span {
+  &:active {
     color: #b3b3b3;
   }
 
-  &:active path {
-    fill: #b3b3b3;
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 28px;
+    height: 35px;
+    mask-image: url("../../img/stack.svg#htmlacademy");
+    mask-repeat: no-repeat;
+    background-color: #000000;
+    right: 0;
+  }
+
+  &:hover::before {
+    background-color: @blue;
+  }
+
+  &:active::before {
+    background-color: #b3b3b3;
   }
 }
 
