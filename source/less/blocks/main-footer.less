@@ -40,18 +40,60 @@
   width: 48px;
   height: 48px;
   background-color: @blue;
+  position: relative;
+  outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     background-color: @blue-hover;
   }
 
   &:active {
     background-color: @blue-down;
 
-    img {
-      opacity: 30%;
+    &:active::before {
+      background-color: fade(@white, 30%);
     }
   }
+}
+
+.social__button--vk::before {
+  content: " ";
+  position: absolute;
+  mask-image: url("../../img/stack.svg#vk");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @white;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
+}
+
+.social__button--tm::before {
+  content: " ";
+  position: absolute;
+  mask-image: url("../../img/stack.svg#telegram");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @white;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
+}
+
+.social__button--you::before {
+  content: " ";
+  position: absolute;
+  mask-image: url("../../img/stack.svg#youtube");
+  mask-position: center;
+  mask-repeat: no-repeat;
+  background-color: @white;
+  width: 24px;
+  height: 24px;
+  top: 12px;
+  left: 12px;
 }
 
 .main-footer__title {
@@ -72,8 +114,10 @@
   color: #000000;
   margin-right: 8px;
   height: 35px;
+  outline: none;
 
-  &:hover {
+  &:hover,
+  &:focus {
     color: @blue;
   }
 
@@ -92,7 +136,8 @@
     right: 0;
   }
 
-  &:hover::before {
+  &:hover::before,
+  &:focus::before {
     background-color: @blue;
   }
 
