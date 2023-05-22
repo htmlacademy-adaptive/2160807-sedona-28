@@ -49,8 +49,17 @@
   margin-bottom: 32px;
   padding: 0 15px;
 
+  & br {
+    display: none;
+  }
+
   @media (min-width: @w-tablet) {
     margin-bottom: 44px;
+    padding: 0;
+
+    & br {
+      display: inline;
+    }
   }
 }
 
