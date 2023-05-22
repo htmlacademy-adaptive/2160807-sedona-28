@@ -34,3 +34,45 @@
     margin-bottom: 65px;
   }
 }
+
+.catalog-video__link {
+  position: relative;
+  outline: none;
+
+  &:hover,
+  &:focus {
+    opacity: 80%;
+  }
+
+  &:active {
+    opacity: 60%;
+  }
+
+  &::before {
+    content: " ";
+    position: absolute;
+    width: 48px;
+    height: 54px;
+    mask-image: url("../../img/stack.svg#play");
+    mask-repeat: no-repeat;
+    mask-position: center;
+    top: -106px;
+    left: 116px;
+    background-color: fade(@white, 70%);
+
+    @media (min-width: @w-tablet) {
+      top: -263px;
+      left: 300px;
+      background-color: fade(@white, 30%);
+    }
+
+    @media (min-width: @w-desktop) {
+      left: 376px;
+    }
+  }
+
+  &:hover::before,
+  &:active::before {
+    background-color: @white;
+  }
+}

@@ -273,6 +273,7 @@
   padding: 10px;
   padding-left: 62px;
   box-sizing: border-box;
+  cursor: pointer;
 
 
   &:hover::before {
@@ -286,6 +287,14 @@
   &:active::after {
     opacity: 30%;
   }
+}
+
+.input-radio:focus ~ .group-impression__subtitle::before {
+  background-color: #e5e5e5;
+}
+
+.checkbox-input:focus ~ .group-attractions__subtitle::before {
+  background-color: #e5e5e5;
 }
 
 .group-impression__subtitle::before {
@@ -436,10 +445,12 @@
   display: block;
   text-align: end;
   padding-right: 20px;
+  color: fade(@dr-gray, 60%);
 
   @media (min-width: @w-tablet) {
     justify-self: end;
     align-self: center;
+    color: @dr-gray;
   }
 
   @media (min-width: @w-desktop) {
